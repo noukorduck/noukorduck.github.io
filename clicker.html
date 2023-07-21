@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clicker Game</title>
+  <style>
+    /* Center the content */
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Style the button */
+    #clickButton {
+      font-size: 24px;
+      padding: 10px 20px;
+    }
+
+    /* Style the background */
+    body {
+      background-color: purple;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clicker Game</h1>
+  <p>Points: <span id="points">0</span></p>
+  <button id="clickButton">Click Me!</button>
+
+  <script>
+    // Get necessary elements from the HTML
+    const pointsDisplay = document.getElementById('points');
+    const clickButton = document.getElementById('clickButton');
+
+    // Set initial points
+    let points = 0;
+
+    // Function to update the points display
+    function updatePoints() {
+      pointsDisplay.textContent = points;
+
+      // Check if points reach a multiple of 100
+      if (points % 100 === 0 && points > 0) {
+        playTadaSound(); // Play the tada sound
+      }
+    }
+
+    // Event listener for the click button
+    clickButton.addEventListener('click', function() {
+      points++; // Increase points by 1 on each click
+      updatePoints(); // Update the points display
+    });
+
+    // Function to play the tada sound
+    function playTadaSound() {
+      // Create an audio element
+      const audio = new Audio('tada.wav');
+      audio.play();
+    }
+
+    // Prevent holding the Enter key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+      }
+    });
+
+    // Trigger click on the button when Enter is pressed
+    document.addEventListener('keyup', function(event) {
+      if (event.key === 'Enter') {
+        clickButton.click();
+      }
+    });
+  </script>
+</body>
+</html>
+

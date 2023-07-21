@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>watchmalware</title>
+    <style>
+        h1 {
+            text-align: left;
+            color: black;
+            font-weight: bold;
+            font-size: 40px;
+            background-color: lightskyblue;
+            padding: 10px;
+            border: 2px solid black;
+            font-style: italic;
+            width: 250px;
+        }
+        body {
+            background-color: rgb(85, 18, 173);
+            color: white;
+        }
+        body *:not(a) {
+            font-weight: bold;
+            color: black;
+            font-style: italic;
+        }
+        .button-container {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: 20px;
+        }
+        .img-box {
+            position: fixed;
+            top: 40%;
+            right: 30%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: 20px;
+        }
+        .button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: red;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .link-box {
+            background-color: lightcoral;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 250px;
+        }
+    </style>
+    <script>
+        function playErrorVideo() {
+            var video = document.createElement('video');
+            video.src = 'Windows XP Error Sound(720p).mp4';
+            video.autoplay = true;
+            video.style.display = 'none';
+            document.body.appendChild(video); }
+        document.addEventListener('DOMContentLoaded', function() {
+            var linkBox = document.querySelector('.link-box');
+            linkBox.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        });
+        document.addEventListener('click', function() {
+            playErrorVideo();
+        });
+    </script>
+</head>
+<body>
+  <h1>Watchmalware</h1>
+    <div class="link-box">
+        <h2>Youtube</h2>
+        <a href="https://www.youtube.com/@csrss-exe/featured">csrss.exe</a>
+        <a href="https://www.youtube.com/@noukorduckoffical/featured">nouk_or_duck?</a>
+        <h3>Soundcloud</h3>
+        <a href="https://soundcloud.com/noukorduck?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">noukorduck</a>
+        <h4>best youtuber!</h4>
+        <a href="https://www.youtube.com/@Endermanch/featured">Endermanch</a>
+        <a href="https://malwarewatch.org/">malwarewatch.org</a>
+        <p>Contact Me</p>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqbQcskBZZkZzQXBGpvGSvsfvmxRnNfzQXfxKRLhfnDZRkXtfPgmzBqwMCtRtrkntCwlVV">My email</a>
+        <p>the best of noukorduck_ram</p>
+        <a href="https://youtu.be/9cNRpfjfPlg">most popular video</a>
+    </div>
+    <div class="button-container">
+        <button class="button" onclick="window.location.href='https://github.com/noukorduck/Malware'">Malware</button>
+        <button class="button" onclick="window.location.href='https://days.to/until/summer'">Click Me!</button>
+        <button class="button" onclick="window.location.href='https://github.com/noukorduck/Projects'">Projects!</button>
+        <button class="button" onclick="window.location.href='https://scratch.mit.edu/users/Noahsmith456t7/'">My Scratch</button>
+        <button class="button" onclick="window.location.href='clicker.html'">Clicker</button>
+    </div>
+    <div class="img-box">
+        <a href="https://example.com"></a>
+        <center><img src="duck.jpg" alt="Image" /></center>
+    </div>
+</body>
+</html>
